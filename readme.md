@@ -5,68 +5,68 @@
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
 [![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://opensource.org/)
 
-# **4Dev React - Enquetes para Programadores**
+# **4Dev React - 개발자를 위한 설문조사**
 
-[![alt text](./public/course-logo.png "Link para o treinamento")](https://www.udemy.com/course/react-com-mango/?referralCode=552F88858EAE76346C8B)
+[![alt text](./public/course-logo.png "교육 링크")](https://www.udemy.com/course/react-com-mango/?referralCode=552F88858EAE76346C8B)
 
 ---
 
-## [**Link para o curso completo**](https://www.udemy.com/course/react-com-mango/?referralCode=552F88858EAE76346C8B)
+## [**전체 강의 링크**](https://www.udemy.com/course/react-com-mango/?referralCode=552F88858EAE76346C8B)
 
-Essa sistema faz parte do treinamento do professor Rodrigo Manguinho (Mango) na Udemy.
+이 시스템은 Udemy에서 Rodrigo Manguinho(Mango) 강사가 진행하는 강의의 일부입니다.
 
-O objetivo do treinamento é mostrar como criar um sistema em ReactJs utilizando os novos Hooks, Recoil, com uma arquitetura bem definida e desacoplada, utilizando TDD (programação orientada a testes) como metodologia de trabalho, Clean Architecture para fazer a distribuição de responsabilidades em camadas, sempre seguindo os princípios do SOLID, DRY, YAGNI, KISS e aplicando Design Patterns para resolver alguns problemas comuns.
+이 강의의 목표는 ReactJs의 최신 Hooks와 Recoil을 활용해 명확하게 정의되고 느슨하게 결합된 아키텍처로 시스템을 만드는 방법을 보여주는 것입니다. 작업 방법론으로 TDD(테스트 주도 개발)를 사용하고, Clean Architecture로 계층별 책임 분리를 하며, SOLID, DRY, YAGNI, KISS 원칙을 항상 따르고, 공통 문제를 해결하기 위해 디자인 패턴을 적용합니다.
 <br /><br />
 
-## Contribua com esse Projeto <3
+## 이 프로젝트에 기여하기 <3
 <a href='https://ko-fi.com/M4M265FO6' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi3.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
 <br />
 
-## [**Link para a documentação da API**](http://fordevs.herokuapp.com/api-docs)
+## [**API 문서 링크**](http://fordevs.herokuapp.com/api-docs)
 
-> ## Princípios
+> ## 원칙
 
-* Single Responsibility Principle (SRP)
-* Open Closed Principle (OCP)
-* Liskov Substitution Principle (LSP)
-* Interface Segregation Principle (ISP)
-* Dependency Inversion Principle (DIP)
-* Separation of Concerns (SOC)
-* Don't Repeat Yourself (DRY)
-* You Aren't Gonna Need It (YAGNI)
-* Keep It Simple, Silly (KISS)
-* Composition Over Inheritance
-* Small Commits
+* 단일 책임 원칙 (SRP)
+* 개방-폐쇄 원칙 (OCP)
+* 리스코프 치환 원칙 (LSP)
+* 인터페이스 분리 원칙 (ISP)
+* 의존성 역전 원칙 (DIP)
+* 관심사의 분리 (SOC)
+* DRY (Don't Repeat Yourself)
+* YAGNI (You Aren't Gonna Need It)
+* KISS (Keep It Simple, Silly)
+* 상속보다 합성
+* 작은 커밋
 
-> ## Design Patterns
+> ## 디자인 패턴
 
-* Factory
-* Adapter
-* Composite
-* Decorator
-* Dependency Injection
-* Composition Root
-* Builder
-* Proxy
+* 팩토리
+* 어댑터
+* 컴포지트
+* 데코레이터
+* 의존성 주입
+* 컴포지션 루트
+* 빌더
+* 프록시
 
-> ## Metodologias e Designs
+> ## 방법론 및 설계
 
 * TDD
-* Clean Architecture
+* 클린 아키텍처
 * DDD
-* Reactive Programming
-* Responsive Layout
-* Conventional Commits
+* 반응형 프로그래밍
+* 반응형 레이아웃
+* 컨벤셔널 커밋
 * GitFlow
-* Modular Design
-* Dependency Diagrams
-* Use Cases
-* Continuous Integration
-* Continuous Delivery
-* Continuous Deployment
+* 모듈러 디자인
+* 의존성 다이어그램
+* 유스 케이스
+* 지속적 통합
+* 지속적 전달
+* 지속적 배포
 
-> ## Bibliotecas e Ferramentas
+> ## 라이브러리 및 도구
 
 * Typescript
 * React
@@ -78,7 +78,7 @@ O objetivo do treinamento é mostrar como criar um sistema em ReactJs utilizando
 * Axios
 * Git
 * Webpack
-* SASS + Animations
+* SASS + 애니메이션
 * NPM
 * Travis CI
 * Faker
@@ -89,65 +89,65 @@ O objetivo do treinamento é mostrar como criar um sistema em ReactJs utilizando
 * Standard Javascript Style
 * React Flip Move
 
-> ## Features do React
+> ## React 기능
 
-* Functional Components
+* 함수형 컴포넌트
 * UseState
 * UseContext
 * UseEffect
 * UseHistory
 * UseRef
 * UseParams
-* Custom Hooks
+* 커스텀 훅
 * UseRecoilState
 * UseResetRecoilState
 * UseRecoilValue
 * UseRecoilSetState
 * Atom
-* Router
+* 라우터
 * Memo
 
-> ## Features do Git
+> ## Git 기능
 
-* Alias
-* Log Personalizado
-* Branch
-* Reset
-* Amend
-* Tag
-* Tag Anotada
-* Stash
-* Rebase
-* Merge
-* Add
-* Commit
-* Push
-* Pull
+* 별칭
+* 사용자 지정 로그
+* 브랜치
+* 리셋
+* 커밋 수정
+* 태그
+* 주석 태그
+* 스태시
+* 리베이스
+* 머지
+* 추가
+* 커밋
+* 푸시
+* 풀
 * Shortlog
-* Status
+* 상태
 
-> ## Features do Typescript
+> ## Typescript 기능
 
-* POO Avançado
-* Interface
-* Type Alias
-* Namespace
-* Module
-* Utility Types
-* Modularização de Paths
-* Build
-* Deploy
-* Generics
+* 고급 객체지향 프로그래밍
+* 인터페이스
+* 타입 별칭
+* 네임스페이스
+* 모듈
+* 유틸리티 타입
+* 경로 모듈화
+* 빌드
+* 배포
+* 제네릭
 
-> ## Features de Testes
+> ## 테스트 기능
 
-* Testes Unitários
-* Testes de Integração
-* Testes e2e
-* Cobertura de Testes
-* Test Doubles
-* Mocks
-* Stubs
-* Spies
-* Fakes
-* Dummies
+* 단위 테스트
+* 통합 테스트
+* e2e 테스트
+* 테스트 커버리지
+* 테스트 더블
+* Mock
+* Stub
+* Spy
+* Fake
+* Dummy

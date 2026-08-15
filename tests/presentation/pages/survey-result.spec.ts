@@ -71,7 +71,7 @@ describe('SurveyResult Component', () => {
     await waitFor(() => screen.getByTestId('survey-result'))
 
     expect(screen.getByTestId('day')).toHaveTextContent('10')
-    expect(screen.getByTestId('month')).toHaveTextContent('jan')
+    expect(screen.getByTestId('month')).toHaveTextContent('1월')
     expect(screen.getByTestId('year')).toHaveTextContent('2020')
     expect(screen.getByTestId('question')).toHaveTextContent(surveyResult.question)
     expect(screen.getByTestId('answers').childElementCount).toBe(2)
@@ -202,7 +202,7 @@ describe('SurveyResult Component', () => {
     await waitFor(() => screen.getByTestId('survey-result'))
 
     expect(screen.getByTestId('day')).toHaveTextContent('20')
-    expect(screen.getByTestId('month')).toHaveTextContent('fev')
+    expect(screen.getByTestId('month')).toHaveTextContent('2월')
     expect(screen.getByTestId('year')).toHaveTextContent('2018')
     expect(screen.getByTestId('question')).toHaveTextContent(surveyResult.question)
     expect(screen.getByTestId('answers').childElementCount).toBe(2)

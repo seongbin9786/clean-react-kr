@@ -16,13 +16,13 @@ describe('SurveyList', () => {
   it('Should present error on UnexpectedError', () => {
     mockUnexpectedError()
     cy.visit('')
-    cy.getByTestId('error').should('contain.text', 'Algo de errado aconteceu. Tente novamente em breve.')
+    cy.getByTestId('error').should('contain.text', '문제가 발생했습니다. 잠시 후 다시 시도해 주세요.')
   })
 
   it('Should reload on button click', () => {
     mockUnexpectedError()
     cy.visit('')
-    cy.getByTestId('error').should('contain.text', 'Algo de errado aconteceu. Tente novamente em breve.')
+    cy.getByTestId('error').should('contain.text', '문제가 발생했습니다. 잠시 후 다시 시도해 주세요.')
     mockSuccess()
     cy.getByTestId('reload').click()
     cy.get('li:not(:empty)').should('have.length', 2)
@@ -56,7 +56,7 @@ describe('SurveyList', () => {
     cy.get('li:not(:empty)').should('have.length', 2)
     cy.get('li:nth-child(1)').then(li => {
       assert.equal(li.find('[data-testid="day"]').text(), '03')
-      assert.equal(li.find('[data-testid="month"]').text(), 'fev')
+      assert.equal(li.find('[data-testid="month"]').text(), '2월')
       assert.equal(li.find('[data-testid="year"]').text(), '2018')
       assert.equal(li.find('[data-testid="question"]').text(), 'Question 1')
       cy.fixture('icons').then(icon => {
@@ -65,7 +65,7 @@ describe('SurveyList', () => {
     })
     cy.get('li:nth-child(2)').then(li => {
       assert.equal(li.find('[data-testid="day"]').text(), '20')
-      assert.equal(li.find('[data-testid="month"]').text(), 'out')
+      assert.equal(li.find('[data-testid="month"]').text(), '10월')
       assert.equal(li.find('[data-testid="year"]').text(), '2020')
       assert.equal(li.find('[data-testid="question"]').text(), 'Question 2')
       cy.fixture('icons').then(icon => {

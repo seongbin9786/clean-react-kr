@@ -32,13 +32,13 @@ describe('SignUp', () => {
 
   it('Should load with correct initial state', () => {
     cy.getByTestId('name').should('have.attr', 'readOnly')
-    FormHelper.testInputStatus('name', 'Campo obrigatório')
+    FormHelper.testInputStatus('name', '필수 입력 항목입니다')
     cy.getByTestId('email').should('have.attr', 'readOnly')
-    FormHelper.testInputStatus('email', 'Campo obrigatório')
+    FormHelper.testInputStatus('email', '필수 입력 항목입니다')
     cy.getByTestId('password').should('have.attr', 'readOnly')
-    FormHelper.testInputStatus('password', 'Campo obrigatório')
+    FormHelper.testInputStatus('password', '필수 입력 항목입니다')
     cy.getByTestId('passwordConfirmation').should('have.attr', 'readOnly')
-    FormHelper.testInputStatus('passwordConfirmation', 'Campo obrigatório')
+    FormHelper.testInputStatus('passwordConfirmation', '필수 입력 항목입니다')
     cy.getByTestId('submit').should('have.attr', 'disabled')
     cy.getByTestId('error-wrap').should('not.have.descendants')
   })
@@ -48,18 +48,18 @@ describe('SignUp', () => {
     FormHelper.testInputStatus('email')
     cy.getByTestId('login-link').click()
     cy.getByTestId('signup-link').click()
-    FormHelper.testInputStatus('email', 'Campo obrigatório')
+    FormHelper.testInputStatus('email', '필수 입력 항목입니다')
   })
 
   it('Should present error state if form is invalid', () => {
     cy.getByTestId('name').focus().type(faker.random.alphaNumeric(3))
-    FormHelper.testInputStatus('name', 'Valor inválido')
+    FormHelper.testInputStatus('name', '올바른 값이 아닙니다')
     cy.getByTestId('email').focus().type(faker.random.word())
-    FormHelper.testInputStatus('email', 'Valor inválido')
+    FormHelper.testInputStatus('email', '올바른 값이 아닙니다')
     cy.getByTestId('password').focus().type(faker.random.alphaNumeric(3))
-    FormHelper.testInputStatus('password', 'Valor inválido')
+    FormHelper.testInputStatus('password', '올바른 값이 아닙니다')
     cy.getByTestId('passwordConfirmation').focus().type(faker.random.alphaNumeric(4))
-    FormHelper.testInputStatus('passwordConfirmation', 'Valor inválido')
+    FormHelper.testInputStatus('passwordConfirmation', '올바른 값이 아닙니다')
     cy.getByTestId('submit').should('have.attr', 'disabled')
     cy.getByTestId('error-wrap').should('not.have.descendants')
   })
@@ -81,14 +81,14 @@ describe('SignUp', () => {
   it('Should present EmailInUseError on 403', () => {
     mockEmailInUseError()
     simulateValidSubmit()
-    FormHelper.testMainError('Esse e-mail já está em uso')
+    FormHelper.testMainError('이미 사용 중인 이메일입니다')
     Helper.testUrl('/signup')
   })
 
   it('Should present UnexpectedError on default error cases', () => {
     mockUnexpectedError()
     simulateValidSubmit()
-    FormHelper.testMainError('Algo de errado aconteceu. Tente novamente em breve.')
+    FormHelper.testMainError('문제가 발생했습니다. 잠시 후 다시 시도해 주세요.')
     Helper.testUrl('/signup')
   })
 

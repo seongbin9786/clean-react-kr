@@ -14,7 +14,7 @@ const Calendar: React.FC<Props> = ({ date, className }: Props) => {
         {date.getDate().toString().padStart(2, '0')}
       </span>
       <span data-testid="month" className={Styles.month}>
-        {date.toLocaleString('pt-BR', { month: 'short' }).replace('.', '')}
+        {date.toLocaleString('ko-KR', { month: 'short' }).replace('.', '')}
       </span>
       <span data-testid="year" className={Styles.year}>
         {date.getFullYear()}

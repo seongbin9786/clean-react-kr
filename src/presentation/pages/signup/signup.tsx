@@ -60,13 +60,13 @@ const SignUp: React.FC<Props> = ({ validation, addAccount }: Props) => {
     <div className={Styles.signupWrap}>
       <LoginHeader />
       <form data-testid="form" className={Styles.form} onSubmit={handleSubmit}>
-        <h2>Criar Conta</h2>
-        <Input type="text" name="name" placeholder="Digite seu nome" />
-        <Input type="email" name="email" placeholder="Digite seu e-mail" />
-        <Input type="password" name="password" placeholder="Digite sua senha" />
-        <Input type="password" name="passwordConfirmation" placeholder="Repita sua senha" />
-        <SubmitButton text="Cadastrar" />
-        <Link data-testid="login-link" replace to="/login" className={Styles.link}>Voltar Para Login</Link>
+        <h2>회원가입</h2>
+        <Input type="text" name="name" placeholder="이름을 입력하세요" />
+        <Input type="email" name="email" placeholder="이메일을 입력하세요" />
+        <Input type="password" name="password" placeholder="비밀번호를 입력하세요" />
+        <Input type="password" name="passwordConfirmation" placeholder="비밀번호를 다시 입력하세요" />
+        <SubmitButton text="가입하기" />
+        <Link data-testid="login-link" replace to="/login" className={Styles.link}>로그인으로 돌아가기</Link>
         <FormStatus />
       </form>
       <Footer />

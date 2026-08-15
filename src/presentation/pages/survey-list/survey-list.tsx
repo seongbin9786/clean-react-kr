@@ -30,7 +30,7 @@ const SurveyList: React.FC<Props> = ({ loadSurveyList }: Props) => {
     <div className={Styles.surveyListWrap}>
       <Header />
       <div className={Styles.contentWrap}>
-        <h2>Enquetes</h2>
+        <h2>설문조사</h2>
         {state.error
           ? <Error error={state.error} reload={reload} />
           : <SurveyListItem surveys={state.surveys} />

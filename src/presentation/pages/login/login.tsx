@@ -56,11 +56,11 @@ const Login: React.FC<Props> = ({ validation, authentication }: Props) => {
     <div className={Styles.loginWrap}>
       <LoginHeader />
       <form data-testid="form" className={Styles.form} onSubmit={handleSubmit}>
-        <h2>Login</h2>
-        <Input type="email" name="email" placeholder="Digite seu e-mail" />
-        <Input type="password" name="password" placeholder="Digite sua senha" />
-        <SubmitButton text="Entrar" />
-        <Link data-testid="signup-link" to="/signup" className={Styles.link}>Criar conta</Link>
+        <h2>로그인</h2>
+        <Input type="email" name="email" placeholder="이메일을 입력하세요" />
+        <Input type="password" name="password" placeholder="비밀번호를 입력하세요" />
+        <SubmitButton text="로그인" />
+        <Link data-testid="signup-link" to="/signup" className={Styles.link}>회원가입</Link>
         <FormStatus />
       </form>
       <Footer />
