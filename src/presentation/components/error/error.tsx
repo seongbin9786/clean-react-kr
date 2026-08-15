@@ -11,7 +11,7 @@ const Error: React.FC<Props> = ({ error, reload }: Props) => {
   return (
     <div className={Styles.errorWrap}>
       <span data-testid="error">{error}</span>
-      <button data-testid="reload" onClick={reload}>Tentar novamente</button>
+      <button data-testid="reload" onClick={reload}>다시 시도</button>
     </div>
   )
 }

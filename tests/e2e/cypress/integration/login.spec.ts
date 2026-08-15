@@ -29,9 +29,9 @@ describe('Login', () => {
 
   it('Should load with correct initial state', () => {
     cy.getByTestId('email').should('have.attr', 'readOnly')
-    FormHelper.testInputStatus('email', 'Campo obrigatório')
+    FormHelper.testInputStatus('email', '필수 입력 항목입니다')
     cy.getByTestId('password').should('have.attr', 'readOnly')
-    FormHelper.testInputStatus('password', 'Campo obrigatório')
+    FormHelper.testInputStatus('password', '필수 입력 항목입니다')
     cy.getByTestId('submit').should('have.attr', 'disabled')
     cy.getByTestId('error-wrap').should('not.have.descendants')
   })
@@ -41,14 +41,14 @@ describe('Login', () => {
     FormHelper.testInputStatus('email')
     cy.getByTestId('signup-link').click()
     cy.getByTestId('login-link').click()
-    FormHelper.testInputStatus('email', 'Campo obrigatório')
+    FormHelper.testInputStatus('email', '필수 입력 항목입니다')
   })
 
   it('Should present error state if form is invalid', () => {
     cy.getByTestId('email').focus().type(faker.random.word())
-    FormHelper.testInputStatus('email', 'Valor inválido')
+    FormHelper.testInputStatus('email', '올바른 값이 아닙니다')
     cy.getByTestId('password').focus().type(faker.random.alphaNumeric(3))
-    FormHelper.testInputStatus('password', 'Valor inválido')
+    FormHelper.testInputStatus('password', '올바른 값이 아닙니다')
     cy.getByTestId('submit').should('have.attr', 'disabled')
     cy.getByTestId('error-wrap').should('not.have.descendants')
   })
@@ -65,14 +65,14 @@ describe('Login', () => {
   it('Should present InvalidCredentialsError on 401', () => {
     mockInvalidCredentialsError()
     simulateValidSubmit()
-    FormHelper.testMainError('Credenciais inválidas')
+    FormHelper.testMainError('이메일 또는 비밀번호가 올바르지 않습니다')
     Helper.testUrl('/login')
   })
 
   it('Should present UnexpectedError on default error cases', () => {
     mockUnexpectedError()
     simulateValidSubmit()
-    FormHelper.testMainError('Algo de errado aconteceu. Tente novamente em breve.')
+    FormHelper.testMainError('문제가 발생했습니다. 잠시 후 다시 시도해 주세요.')
     Helper.testUrl('/login')
   })
 

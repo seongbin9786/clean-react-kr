@@ -18,13 +18,13 @@ describe('SurveyResult', () => {
     it('Should present error on UnexpectedError', () => {
       mockUnexpectedError()
       cy.visit('/surveys/any_id')
-      cy.getByTestId('error').should('contain.text', 'Algo de errado aconteceu. Tente novamente em breve.')
+      cy.getByTestId('error').should('contain.text', '문제가 발생했습니다. 잠시 후 다시 시도해 주세요.')
     })
 
     it('Should reload on button click', () => {
       mockUnexpectedError()
       cy.visit('/surveys/any_id')
-      cy.getByTestId('error').should('contain.text', 'Algo de errado aconteceu. Tente novamente em breve.')
+      cy.getByTestId('error').should('contain.text', '문제가 발생했습니다. 잠시 후 다시 시도해 주세요.')
       mockLoadSuccess()
       cy.getByTestId('reload').click()
       cy.getByTestId('question').should('exist')
@@ -41,7 +41,7 @@ describe('SurveyResult', () => {
       cy.visit('/surveys/any_id')
       cy.getByTestId('question').should('have.text', 'Question')
       cy.getByTestId('day').should('have.text', '03')
-      cy.getByTestId('month').should('have.text', 'fev')
+      cy.getByTestId('month').should('have.text', '2월')
       cy.getByTestId('year').should('have.text', '2018')
       cy.get('li:nth-child(1)').then(li => {
         assert.equal(li.find('[data-testid="answer"]').text(), 'any_answer')
@@ -80,7 +80,7 @@ describe('SurveyResult', () => {
     it('Should present error on UnexpectedError', () => {
       mockUnexpectedError()
       cy.get('li:nth-child(2)').click()
-      cy.getByTestId('error').should('contain.text', 'Algo de errado aconteceu. Tente novamente em breve.')
+      cy.getByTestId('error').should('contain.text', '문제가 발생했습니다. 잠시 후 다시 시도해 주세요.')
     })
 
     it('Should logout on AccessDeniedError', () => {
@@ -94,7 +94,7 @@ describe('SurveyResult', () => {
       cy.get('li:nth-child(2)').click()
       cy.getByTestId('question').should('have.text', 'Other Question')
       cy.getByTestId('day').should('have.text', '23')
-      cy.getByTestId('month').should('have.text', 'mar')
+      cy.getByTestId('month').should('have.text', '3월')
       cy.getByTestId('year').should('have.text', '2020')
       cy.get('li:nth-child(1)').then(li => {
         assert.equal(li.find('[data-testid="answer"]').text(), 'other_answer')

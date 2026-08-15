@@ -1,6 +1,6 @@
 export class AccessDeniedError extends Error {
   constructor () {
-    super('Acesso negado!')
+    super('접근 권한이 없습니다!')
     this.name = 'AccessDeniedError'
   }
 }

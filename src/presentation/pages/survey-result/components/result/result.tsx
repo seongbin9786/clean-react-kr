@@ -21,7 +21,7 @@ const Result: React.FC<Props> = ({ surveyResult }: Props) => {
       <ul data-testid="answers" className={Styles.answersList}>
         {surveyResult.answers.map(answer => <SurveyResultAnswer key={answer.answer} answer={answer} />)}
       </ul>
-      <button className={Styles.button} data-testid="back-button" onClick={goBack}>Voltar</button>
+      <button className={Styles.button} data-testid="back-button" onClick={goBack}>뒤로가기</button>
     </>
   )
 }
